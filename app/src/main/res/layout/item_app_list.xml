@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_item_body"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="12dp"
+    android:layout_marginStart="12dp"
+    android:layout_marginTop="5dp"
+    app:cardCornerRadius="5dp"
+    app:cardUseCompatPadding="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_item_app"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv_item_app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:ellipsize="start"
+            android:maxWidth="225dp"
+            android:singleLine="true"
+            android:textColor="#212121"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tv_item_app_package"
+            app:layout_constraintStart_toEndOf="@id/iv_item_app"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="微信" />
+
+        <TextView
+            android:id="@+id/tv_item_app_package"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="start"
+            android:maxWidth="225dp"
+            android:singleLine="true"
+            android:textColor="#808080"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_item_app_version_name"
+            app:layout_constraintStart_toStartOf="@id/tv_item_app_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_app_name"
+            tools:text="com.tencent.mm" />
+
+        <TextView
+            android:id="@+id/tv_item_app_version_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:textColor="#808080"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_item_app_package"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_app_package"
+            tools:text="6.16.6" />
+
+        <ImageView
+            android:id="@+id/iv_item_app_option"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:paddingBottom="6dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="6dp"
+            android:paddingTop="10dp"
+            android:src="@drawable/ic_more"
+            android:tint="#808080"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>
